@@ -1,1 +1,0 @@
-const b=document.getElementById("lang");let lang="en";b.onclick=()=>{lang=lang==="en"?"lv":"en";document.documentElement.lang=lang;document.querySelectorAll("[data-en]").forEach(e=>e.innerHTML=e.dataset[lang]);b.innerHTML=lang==="en"?"LV / <b>EN</b>":"<b>LV</b> / EN"};
