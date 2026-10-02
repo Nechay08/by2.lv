@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://by2.lv/sitemap.xml
