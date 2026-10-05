@@ -2,22 +2,22 @@
 :root{--ink:#102b3c;--navy:#103b56;--paper:#fbfcfc;--line:#dfe6e9;--muted:#6b7c85}
 html{scroll-behavior:smooth}
 body{margin:0;color:var(--ink);background:var(--paper);font-family:Arial,Helvetica,sans-serif}
-header{height:88px;display:flex;align-items:center;padding:0 5.5vw;background:#fff;gap:42px;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(16,43,60,.09)}
-.brand{display:grid;grid-template-columns:auto auto;align-items:end;gap:8px;text-decoration:none;color:var(--ink);min-width:300px}
-.brand b{font-family:Georgia,serif;font-size:33px;font-weight:400;letter-spacing:-2px}
-.brand span{font-size:13px;margin-bottom:6px}
-.brand small{grid-column:1/3;font-size:7px;letter-spacing:.4px;color:#71808a}
-nav{margin-left:auto;display:flex;gap:30px}
-nav a{font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#183447}
-.lang{border:0;background:none;color:#183447;cursor:pointer}
+header{height:94px;display:flex;align-items:center;padding:0 5.5vw;background:rgba(255,255,255,.98);gap:42px;position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(16,43,60,.10);backdrop-filter:blur(10px)}
+.brand{display:grid;grid-template-columns:auto auto;align-items:end;column-gap:10px;row-gap:2px;text-decoration:none;color:var(--ink);min-width:350px}
+.brand b{font-family:Georgia,serif;font-size:39px;line-height:.92;font-weight:400;letter-spacing:-2.4px}
+.brand span{font-size:14px;margin-bottom:3px}
+.brand small{grid-column:1/3;margin-top:6px;font-size:8px;letter-spacing:.09em;color:#71808a;white-space:nowrap}
+nav{margin-left:auto;display:flex;align-items:center;gap:34px}
+nav a{font-size:10px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:#183447}
+.lang{border:0;background:none;color:#183447;cursor:pointer;font-size:11px;margin-left:4px}
 .kicker{font-size:9px;letter-spacing:2.2px;font-weight:700;margin-bottom:20px}
-.hero{min-height:720px;display:grid;grid-template-columns:46% 54%;background:#fff}
-.heroCopy{padding:145px 7vw 100px}
+.hero{height:620px;min-height:0;display:grid;grid-template-columns:50% 50%;background:#fff}
+.heroCopy{padding:82px 6.5vw 62px;display:flex;flex-direction:column;justify-content:center}
 .hero h1,.intro h2,.businessVisual h2,.approach h2,.team h2,.contact h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-2.4px}
-.hero h1{font-size:64px;line-height:.98;max-width:620px;margin:0 0 24px}
-.hero p{max-width:470px;color:#60727d;line-height:1.7;font-size:15px}
-.cta{display:inline-block;margin-top:24px;padding:14px 0;border-bottom:1px solid var(--ink);color:var(--ink);text-decoration:none;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
-.heroVisual{position:relative;overflow:hidden;background:#0f3d59}
+.hero h1{font-size:58px;line-height:.98;max-width:620px;margin:0 0 22px}
+.hero p{max-width:540px;color:#60727d;line-height:1.65;font-size:15px;margin:0 0 6px}
+.cta{display:inline-block;align-self:flex-start;margin-top:24px;padding:13px 0;border-bottom:1px solid var(--ink);color:var(--ink);text-decoration:none;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.heroVisual{position:relative;overflow:hidden;background:#0f3d59;height:620px}
 .heroVisual img{width:100%;height:100%;object-fit:cover;display:block}
 .glass{position:absolute;right:5%;bottom:5%;background:rgba(250,252,252,.91);backdrop-filter:blur(10px);padding:26px 32px;display:grid;gap:12px;font-size:11px;box-shadow:0 20px 60px rgba(0,0,0,.08)}
 .intro{padding:115px 7vw 60px;background:#f7f9fa}
