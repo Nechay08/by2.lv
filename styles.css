@@ -1,4 +1,6 @@
-*{box-sizing:border-box}
+*{
+box-sizing:border-box
+}
 
 :root{
 --ink:#102b3c;
@@ -8,7 +10,9 @@
 --muted:#6b7c85
 }
 
-html{scroll-behavior:smooth}
+html{
+scroll-behavior:smooth
+}
 
 body{
 margin:0;
@@ -128,32 +132,36 @@ font-weight:400;
 letter-spacing:-2.4px
 }
 
-/* FIRST SCREEN */
+/* HERO */
 
 .hero{
-height:540px;
-min-height:0;
+min-height:520px;
+height:auto;
 display:grid;
-grid-template-columns:53% 47%;
-background:#fff
+grid-template-columns:52% 48%;
+align-items:center;
+background:#fff;
+padding:28px 4.5vw 28px 6.5vw;
+gap:34px
 }
 
 .heroCopy{
-padding:55px 5.5vw 55px 7vw;
+padding:20px 0;
 display:flex;
 flex-direction:column;
-justify-content:center
+justify-content:center;
+max-width:660px
 }
 
 .hero h1{
-font-size:55px;
+font-size:54px;
 line-height:.98;
-max-width:650px;
+max-width:620px;
 margin:0 0 20px
 }
 
 .hero p{
-max-width:560px;
+max-width:520px;
 color:#60727d;
 line-height:1.6;
 font-size:15px;
@@ -163,7 +171,7 @@ margin:0
 .cta{
 display:inline-block;
 align-self:flex-start;
-margin-top:27px;
+margin-top:26px;
 padding:12px 0;
 border-bottom:1px solid var(--ink);
 color:var(--ink);
@@ -177,31 +185,31 @@ text-transform:uppercase
 position:relative;
 overflow:hidden;
 background:#0f3d59;
-height:540px
+height:460px
 }
 
 .heroVisual img{
 width:100%;
 height:100%;
 object-fit:cover;
-object-position:center;
+object-position:center 55%;
 display:block
 }
 
 .glass{
 position:absolute;
-right:4%;
-bottom:5%;
-background:rgba(250,252,252,.92);
+right:22px;
+bottom:22px;
+background:rgba(250,252,252,.93);
 backdrop-filter:blur(10px);
-padding:22px 27px;
+padding:20px 25px;
 display:grid;
-gap:10px;
+gap:9px;
 font-size:10px;
 box-shadow:0 20px 60px rgba(0,0,0,.08)
 }
 
-/* EXPERTISE */
+/* INTRO */
 
 .intro{
 padding:90px 7vw 52px;
@@ -212,6 +220,8 @@ background:#f7f9fa
 font-size:50px;
 margin:0
 }
+
+/* SERVICES */
 
 .services{
 background:#fff
@@ -243,7 +253,7 @@ line-height:1.7;
 font-size:14px
 }
 
-/* RIGA IMAGE */
+/* RIGA VISUAL */
 
 .businessVisual{
 position:relative;
@@ -566,11 +576,14 @@ margin-left:15px
 }
 
 .hero{
-grid-template-columns:52% 48%
+grid-template-columns:51% 49%;
+padding-left:5vw;
+padding-right:3vw;
+gap:25px
 }
 
 .hero h1{
-font-size:49px
+font-size:47px
 }
 
 }
@@ -606,12 +619,16 @@ margin-left:auto
 }
 
 .hero{
+min-height:0;
 height:auto;
-grid-template-columns:1fr
+grid-template-columns:1fr;
+padding:0;
+gap:0
 }
 
 .heroCopy{
-padding:70px 7vw 60px
+padding:70px 7vw 60px;
+max-width:none
 }
 
 .hero h1{
@@ -702,12 +719,12 @@ flex-wrap:wrap
 
 @media(max-width:560px){
 
-.hero h1{
-font-size:40px
+.heroCopy{
+padding:58px 7vw 52px
 }
 
-.heroCopy{
-padding:60px 7vw 55px
+.hero h1{
+font-size:40px
 }
 
 .heroVisual{
