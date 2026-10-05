@@ -18,16 +18,17 @@ body{
 margin:0;
 color:var(--ink);
 background:var(--paper);
-font-family:Arial,Helvetica,sans-serif
+font-family:Arial,Helvetica,sans-serif;
+overflow-x:hidden
 }
 
 /* HEADER */
 
 header{
-height:96px;
+height:94px;
 display:flex;
 align-items:center;
-padding:0 6vw;
+padding:0 5.5vw;
 background:rgba(255,255,255,.98);
 position:sticky;
 top:0;
@@ -39,33 +40,35 @@ backdrop-filter:blur(12px)
 .brand{
 display:grid;
 grid-template-columns:auto auto;
+grid-template-rows:auto auto;
 align-items:end;
-column-gap:11px;
-row-gap:2px;
+justify-content:start;
+column-gap:7px;
+row-gap:5px;
 text-decoration:none;
 color:var(--ink);
-min-width:390px
+min-width:330px
 }
 
 .brand b{
 font-family:Georgia,serif;
-font-size:42px;
+font-size:40px;
 line-height:.88;
 font-weight:400;
-letter-spacing:-2.5px
+letter-spacing:-2.4px
 }
 
 .brand span{
 font-family:Georgia,serif;
-font-size:15px;
+font-size:14px;
+line-height:1;
 margin-bottom:2px
 }
 
 .brand small{
 grid-column:1/3;
-margin-top:8px;
-font-size:8px;
-letter-spacing:.12em;
+font-size:7.5px;
+letter-spacing:.10em;
 color:#71808a;
 white-space:nowrap
 }
@@ -74,17 +77,17 @@ nav{
 margin-left:auto;
 display:flex;
 align-items:center;
-gap:36px
+gap:34px
 }
 
 nav a{
 font-size:10px;
-letter-spacing:.10em;
+letter-spacing:.09em;
 text-transform:uppercase;
 text-decoration:none;
 color:#183447;
 position:relative;
-padding:8px 0
+padding:9px 0
 }
 
 nav a:after{
@@ -92,10 +95,10 @@ content:"";
 position:absolute;
 left:0;
 right:100%;
-bottom:2px;
+bottom:3px;
 height:1px;
 background:#183447;
-transition:right .25s ease
+transition:right .3s ease
 }
 
 nav a:hover:after{
@@ -108,8 +111,8 @@ background:none;
 color:#183447;
 cursor:pointer;
 font-size:11px;
-margin-left:32px;
-padding:8px 0
+margin-left:26px;
+padding:9px 0
 }
 
 /* GENERAL */
@@ -135,33 +138,29 @@ letter-spacing:-2.4px
 /* HERO */
 
 .hero{
-min-height:520px;
-height:auto;
+height:520px;
 display:grid;
-grid-template-columns:52% 48%;
-align-items:center;
+grid-template-columns:48% 52%;
 background:#fff;
-padding:28px 4.5vw 28px 6.5vw;
-gap:34px
+overflow:hidden
 }
 
 .heroCopy{
-padding:20px 0;
+padding:55px 4vw 55px 6.5vw;
 display:flex;
 flex-direction:column;
-justify-content:center;
-max-width:660px
+justify-content:center
 }
 
 .hero h1{
-font-size:54px;
+font-size:53px;
 line-height:.98;
-max-width:620px;
+max-width:610px;
 margin:0 0 20px
 }
 
 .hero p{
-max-width:520px;
+max-width:540px;
 color:#60727d;
 line-height:1.6;
 font-size:15px;
@@ -183,36 +182,42 @@ text-transform:uppercase
 
 .heroVisual{
 position:relative;
+height:520px;
 overflow:hidden;
-background:#0f3d59;
-height:460px
+background:#0f3d59
 }
 
 .heroVisual img{
 width:100%;
 height:100%;
 object-fit:cover;
-object-position:center 55%;
-display:block
+object-position:center center;
+display:block;
+transition:transform 1s cubic-bezier(.2,.6,.2,1)
+}
+
+.heroVisual:hover img{
+transform:scale(1.035)
 }
 
 .glass{
 position:absolute;
-right:22px;
-bottom:22px;
-background:rgba(250,252,252,.93);
+right:4%;
+bottom:5%;
+background:rgba(250,252,252,.92);
 backdrop-filter:blur(10px);
-padding:20px 25px;
+padding:21px 27px;
 display:grid;
 gap:9px;
 font-size:10px;
-box-shadow:0 20px 60px rgba(0,0,0,.08)
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+z-index:2
 }
 
 /* INTRO */
 
 .intro{
-padding:90px 7vw 52px;
+padding:88px 7vw 50px;
 background:#f7f9fa
 }
 
@@ -266,7 +271,12 @@ background:#0c3047
 width:100%;
 height:100%;
 object-fit:cover;
-display:block
+display:block;
+transition:transform 1s cubic-bezier(.2,.6,.2,1)
+}
+
+.businessVisual:hover img{
+transform:scale(1.035)
 }
 
 .businessVisual:after{
@@ -278,7 +288,8 @@ background:linear-gradient(
 rgba(7,35,52,.72) 0%,
 rgba(7,35,52,.30) 48%,
 rgba(7,35,52,.04) 100%
-)
+);
+pointer-events:none
 }
 
 .businessVisualText{
@@ -321,23 +332,24 @@ width:100%;
 height:100%;
 object-fit:cover;
 display:block;
-transition:transform .8s ease
+transition:transform 1s cubic-bezier(.2,.6,.2,1)
 }
 
 .editorialLarge:hover img,
 .editorialSmall:hover img{
-transform:scale(1.025)
+transform:scale(1.035)
 }
 
 .editorialCaption{
 position:absolute;
 left:0;
 bottom:0;
-background:#fff;
+background:rgba(255,255,255,.94);
 padding:22px 30px;
 font-size:8px;
 letter-spacing:1.8px;
-color:#506773
+color:#506773;
+z-index:2
 }
 
 /* APPROACH */
@@ -397,7 +409,12 @@ overflow:hidden
 width:100%;
 height:100%;
 object-fit:cover;
-display:block
+display:block;
+transition:transform 1s cubic-bezier(.2,.6,.2,1)
+}
+
+.approachImage:hover img{
+transform:scale(1.035)
 }
 
 /* TEAM */
@@ -431,19 +448,28 @@ gap:24px
 }
 
 .person{
-margin:0
+margin:0;
+overflow:hidden
 }
 
 .person img{
 width:100%;
 aspect-ratio:4/5;
 object-fit:cover;
-display:block
+display:block;
+transition:transform 1s cubic-bezier(.2,.6,.2,1)
+}
+
+.person:hover img{
+transform:scale(1.025)
 }
 
 .person div{
+position:relative;
+background:#fff;
 padding:20px 0;
-border-bottom:1px solid var(--line)
+border-bottom:1px solid var(--line);
+z-index:2
 }
 
 .person h3{
@@ -514,7 +540,12 @@ width:180px;
 text-transform:uppercase;
 letter-spacing:.08em;
 font-size:10px;
-cursor:pointer
+cursor:pointer;
+transition:opacity .25s ease
+}
+
+.contact button:hover{
+opacity:.88
 }
 
 .trap{
@@ -545,26 +576,29 @@ font-size:27px
 }
 
 section{
-scroll-margin-top:96px
+scroll-margin-top:94px
 }
+
+/* IMAGE TONE */
 
 .heroVisual img,
 .approachImage img,
 .businessVisual img,
-.editorialImages img{
+.editorialImages img,
+.person img{
 filter:saturate(.78) contrast(1.02)
 }
 
 /* TABLET */
 
-@media(max-width:1000px){
+@media(max-width:1100px){
 
 header{
 padding:0 4vw
 }
 
 .brand{
-min-width:300px
+min-width:280px
 }
 
 nav{
@@ -572,14 +606,16 @@ gap:20px
 }
 
 .lang{
-margin-left:15px
+margin-left:12px
 }
 
 .hero{
-grid-template-columns:51% 49%;
+grid-template-columns:50% 50%
+}
+
+.heroCopy{
 padding-left:5vw;
-padding-right:3vw;
-gap:25px
+padding-right:3vw
 }
 
 .hero h1{
@@ -619,16 +655,12 @@ margin-left:auto
 }
 
 .hero{
-min-height:0;
 height:auto;
-grid-template-columns:1fr;
-padding:0;
-gap:0
+grid-template-columns:1fr
 }
 
 .heroCopy{
-padding:70px 7vw 60px;
-max-width:none
+padding:70px 7vw 60px
 }
 
 .hero h1{
